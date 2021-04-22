@@ -14,5 +14,5 @@ npm cache clean -f
 npm install --dev
 npm i got
 
-echo "[*] All dependencies have been installed, please run the command \"npm start\" to immediately start the script"
-echo "Updates : fix Bugs"
+echo "[☑] Todo instalado mi flaco escribe \"npm start\" para iniciar el bot :D"
+echo "CREADOR : Nugtrix-DT 
