@@ -14,7 +14,7 @@ TEAM ♥️༎░🇫🅢🅞🅒🅘🅔🅣🅨 ░༎
 > pkg update && pkg upgrade
 > pkg install git
 > git clone https://github.com/Nugtrix-DT/Fsociety-Bot-V3
-> cd Fsociety-Bot-V4
+> cd Fsociety-Bot-V3
 > npm install
 ```
 ###### Run🏃🏻‍♂️
