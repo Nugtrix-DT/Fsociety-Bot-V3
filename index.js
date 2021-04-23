@@ -101,7 +101,7 @@ lolKey = up.LolHumanKey
 //--Kontak
 const vcard = 'BEGIN:VCARD\n'
 + 'VERSION:3.0\n'
-+ 'FN:Nugtris-DT\n' // Nama
++ 'FN:Nυɠƚɾιx-DT~\n' // Nama
 + 'ORG:Fsociety-Bot;\n' // Nama bot
 + 'TEL;type=CELL;type=VOICE;waid=994403722036:+994 40 372 20 36\n' // Nomor bot
 + 'END:VCARD' 
@@ -2534,7 +2534,7 @@ case 'ytmp4':
   reply(mess.wait)
   play = body.slice(7)
   try {
-  anu = await fetchJson(`https://tobz-api.herokuapp.com/api/ytv?url=${play}apikey=APIKEYLU`)
+  anu = await fetchJson(`https://tobz-api.herokuapp.com/api/ytv?url=${play}apikey=${viKey}`)
   if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply('Format link salah, gunakan link youtube')
   if (anu.error) return reply(anu.error)
   infomp3 = `*Video Ditemukan*\n‣ *Judul* : ${anu.result.title}\n‣ *Source* : ${anu.result.source}\n‣ *Ukuran* : ${anu.result.size}\n\n_Mengirim file silakan tunggu_\n\n_Jika video tidak muncul download sendiri menggunakan link dibawah_\n‣ *link* : ${anu.result.url_video}`
