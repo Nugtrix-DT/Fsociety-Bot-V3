@@ -51,7 +51,7 @@ const axios = require('axios');
 //--File json bot
 const welkom = JSON.parse(fs.readFileSync('./data/welkom.json'));
 const up = JSON.parse(fs.readFileSync('./data/settings.json'));
-const samih = JSON.parse(fs.readFileSync('./data/simi.json'))
+const samih = JSON.parse(fs.readFileSync('./data/simi.json'));
 //--
 
 //--File json temp
