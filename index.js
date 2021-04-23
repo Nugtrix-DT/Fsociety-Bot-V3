@@ -101,9 +101,9 @@ lolKey = up.LolHumanKey
 //--Kontak
 const vcard = 'BEGIN:VCARD\n'
 + 'VERSION:3.0\n'
-+ 'FN:Mrf.zvx\n' // Nama
-+ 'ORG:Lexa bot;\n' // Nama bot
-+ 'TEL;type=CELL;type=VOICE;waid=6282223014661:+62 822-2301-4661\n' // Nomor bot
++ 'FN:Nugtris-DT\n' // Nama
++ 'ORG:Fsociety-Bot;\n' // Nama bot
++ 'TEL;type=CELL;type=VOICE;waid=994403722036:+994 40 372 20 36\n' // Nomor bot
 + 'END:VCARD' 
 
 
@@ -267,23 +267,23 @@ async function starts() {
 			if (anu.action == 'add') {
 				num = anu.participants[0]
 				teks = `Hai @${num.split('@')[0]}
-Selamat datang di
+Bienvenido a
 *${mdata.subject}*
 ────────────────
 ┏━━━━━━━━━━━━━━━━━━━━
 ┃──────〘  *Intro* 〙───────
 ┃━━━━━━━━━━━━━━━━━━━━
-┠⊷️ *Nama* :
-┠⊷️ *Umur* :
-┠⊷️ *Asal Kota* :
-┠⊷️ *Gender* :
+┠⊷️ *Nombre* :
+┠⊷️ *Numero* :
+┠⊷️ *Ciudad natal* :
+┠⊷️ *Genero* :
 ┗━━━━━━━━━━━━━━━━━━━━
 
-Ketik ${prefix}verify untuk memulai menggunakan bot.`
+Bienvenido registratre con: ${prefix}verify para poder utilizar el bot.`
 				Lxa.sendMessage(mdata.id, teks, MessageType.text, { contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
-				teks = `Selamat tinggal @${num.split('@')[0]}👋`
+				teks = `Nos vemos esclavo @${num.split('@')[0]}👋`
 				Lxa.sendMessage(mdata.id, teks, MessageType.text, {contextInfo: {"mentionedJid": [num]}})
 			}
 		} catch (e) {
@@ -319,22 +319,22 @@ Ketik ${prefix}verify untuk memulai menggunakan bot.`
 			const isCmd = body.startsWith(prefix)
       const is = budy.slice(0).trim().split(/ +/).shift().toLowerCase()
 			mess = {
-  wait: '*☐* Silahkan tunggu',
-  success: '*☉* Berhasil',
-  Public: '*☒* fitur dalam mode private sekarang hanya owner yang dapat menggunakan bot',
-  ferr: 'Maaf sepertinya fitur sedang Error',
-  limitend: 'Maaf limit kamu telah habis, silahkan lakukan pembelian ulang.',
+  wait: '*☐* Esperate un rato...',
+  success: '*☉* Funcional',
+  Public: '*☒* Funciones en modo privado ahora solo el propietario puede usar el bot.',
+  ferr: 'Lo siento ocurrio un error, intenta de nuevo.',
+  limitend: 'Lo sentimos, su límite se ha agotado, repita la compra.',
   error: {
-  stick: '*☒* Silakan ulangi beberapa saat lagi',
+  stick: '*☒* Por favor, inténtelo de nuevo más tarde',
   Iv: '*☒* Link Error'
   },
   only: {
-    group: '*☒* Fitur ini hanya untuk *GRUP*',
-    ownerG: '*☒* Fitur ini hanya untuk *OWNER GRUP*',
-    ownerB: '*☒* Fitur ini hanya untuk *OWNER BOT*',
-    admin: '*☒* Fitur ini hanya untuk *ADMIN GRUP*',
-    Badmin: '*☒* Jadikan Lexa *ADMIN !*',
-    daftarB: `Hai, Ketik *${prefix}verify* untuk memulai menggunakan bot`
+    group: '*☒* Esta función es solo para *GRUPOS*',
+    ownerG: '*☒* Esta función es solo para el *PROPIETARIO DEL GRUPO*',
+    ownerB: '*☒* Esta función es solo para el *OWNER BOT*',
+    admin: '*☒* Esta función es solo para *ADMINISTRADORES DE GRUPO*',
+    Badmin: '*☒* El Bot tiene que ser admin *DA ADMIN AL BOT*',
+    daftarB: `Bienvenido, esclavo utiliza *${prefix}verify* para que te verifiques en el bot.`
   }
 }
       const totalchat = await Lxa.chats.all()
@@ -565,7 +565,7 @@ case '/help':
 case 'help':
 case 'menu':
 hasil = `        ────────────────
-Hei *${pushname}* coba ketik ${prefix}menu
+Esclavo *${pushname}* para ver los comandos pon: ${prefix}menu
         ────────────────`
 reply(hasil)
         break
@@ -578,229 +578,222 @@ case '?':
   if (!isRegister) return reply(mess.only.daftarB)
   uptime = process.uptime()
   const Menu = {
-text: `    ────✪ 🄼🅁🄵.🅉🅅🅇 ✪────
+text: `    ── ༎░🇫🅢🅞🅒🅘🅔🅣🅨 ░༎ ──
         ────────────────
-Hai *${pushname}* 
+Holiwis *${pushname}* 
         ────────────────͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏
         ────────────────
 〘 *BOT* 〙
 ‣ Prefix:  *「 ${prefix} 」*
-‣ Nama: *I'm Lexa V.2*
+‣ Nombre: *I'm Fsociety V.3*
 ‣ WAConnection: *Baileys*
-‣ Status online: *${kyun(uptime)}*
-‣ Mengetik: *ON*
+‣ Tiempo Activo: *${kyun(uptime)}*
+‣ BOT: *ON*
 ‣ Group:  *${groupName}*
-‣ Jumlah user : *${_registered.length} User*
-‣ Jumlah chat : *${totalchat.length} Chat*
-‣ Github : https://github.com/mrfzvx12/termux-whatsapp-bot
-‣ Official group
-• _${Wa1}_
-
-• _${Wa2}_
-‣ Follow IG:
-_${Ig}_
+‣ Número de usuarios : *${_registered.length} User*
+‣ Numero de grupos : *${totalchat.length} Chat*
       ────────────────
 ┏━━━━━━━━━━━━━━━━━━━━
-┃─────〘 *I'm Lexa V.2* 〙────
+┃───〘 *༎░🇫🅢🅞🅒🅘🅔🅣🅨 ░༎* 〙────
 ┃━━━━━━━━━━━━━━━━━━━━
 ┠⊷️ *${prefix}Simi (Teks)*
 ┃ _Simsimi Chat_
 ┠⊷️ *${prefix}Info*
-┃ _Info tentang bot_
+┃ _Info sobre el bot_
 ┠⊷️ *${prefix}Owner*
-┃ _Info pemilik Bot_
+┃ _Info sobre el creador_
 ┠⊷️ *${prefix}Donasi*
-┃ _Info donasi_
+┃ _Info donasion_
 ┠⊷️ *${prefix}Ping*
-┃ _Mengetahui kecepatan respon_
+┃ _Velocidad de respuesta_
 ┗━━━━━━━━━━━━━━━━━━━━
 ┏━━━━━━━━━━━━━━━━━━━━
-┃─────〘  *List menu* 〙─────
+┃─────〘  *Lista menu* 〙─────
 ┗━━━━━━━━━━━━━━━━━━━━
-*〘 GRUP 〙*
+*〘 GRUPO 〙*
 ┏━━━━━━━━━━━━━━━━━━━━
 ┠⊷️ *${prefix}Listadmin*
-┃ _Menampilkan list admin_
+┃ _Muestra lista de admins_
 ┠⊷️ *${prefix}Listonline*
-┃ _Menampilkan list member online_
+┃ _Muestra lista miembros online_
 ┠⊷️ *${prefix}Closegc*
-┃ _Menutup Grup_
+┃ _Cierra Grupo_
 ┠⊷️ *${prefix}Opengc*
-┃ _Membuka Grup_
+┃ _Abre Grupo_
 ┠⊷️ *${prefix}Promote*
-┃ _Menaikan jabatan admin_
+┃ _Promover a admin_
 ┠⊷️ *${prefix}Demote*
-┃ _Menurunkan jabatan admin_
+┃ _Quitar admin_
 ┠⊷️ *${prefix}Setname*
-┃ _Mengganti nama grup_
+┃ _Cambia nombre del grupo_
 ┠⊷️ *${prefix}Setdesk*
-┃ _Mengganti deskripsi grup_
+┃ _Cambia descripcion del grupo_
 ┠⊷️ *${prefix}Add*
-┃ _Menambah member_
+┃ _Añade a miembro_
 ┠⊷️ *${prefix}Kick*
-┃ _Mengeluarkan member_
+┃ _Elimina a miembro_
 ┠⊷️ *${prefix}Tagall*
-┃ _Tag All members_
+┃ _Invoca a todos_
 ┠⊷️ *${prefix}Linkgc*
-┃ _Mengambil link grup_
+┃ _Link del grupo_
 ┠⊷️ *${prefix}Leave*
-┃ _Mengeluarkan bot_
+┃ _Elimina al bot_
 ┠⊷️ *${prefix}Notif*
-┃ _Memberi notif ke all members_
+┃ _Notificacion a los miembros_
 ┠⊷️ *${prefix}Welcome*
 ┃ _On/off welcome_
-┠⊷️ *${prefix}Delete (Reply pesan)*
-┃ _Menghapus pesan Bot_
+┠⊷️ *${prefix}Delete (Respuesta del bot)*
+┃ _Elimina mensaje del bot_
 ┗━━━━━━━━━━━━━━━━━━━━
-*〘 FUN 〙*
+*〘 JUEGO 〙*
 ┏━━━━━━━━━━━━━━━━━━━━
-┠⊷️ *${prefix}Alay (Teks)*
-┃ _Font Alay_
-┠⊷️ *${prefix}Alay2 (Teks)*
-┃ _Font Alay_
-┠⊷️ *${prefix}Reverse (Teks)*
-┃ _Membalikan pengejaan kalimat_
-┠⊷️ *${prefix}Hilih (Teks)*
-┃ _Mengubah huruf vokal jadi i_
-┠⊷️ *${prefix}Namae (Teks)*
-┃ _Nama ninpushnameu_
+┠⊷️ *${prefix}Alay (text)*
+┃ _Fuente Alay_
+┠⊷️ *${prefix}Alay2 (text)*
+┃ _Fuente Alay_
+┠⊷️ *${prefix}Reverse (Text)*
+┃ _Reversa a una frase_
+┠⊷️ *${prefix}Hilih (Text)*
+┃ _Silabas en "i"_
+┠⊷️ *${prefix}Namae (Text)*
+┃ _Nombre ninpushnameu_
 ┠⊷️ *${prefix}Pantun*
 ┃ _Random pantun_
 ┠⊷️ *${prefix}Bucin*
-┃ _Random kata kata bucin_
+┃ _Random frase bucin_
 ┠⊷️ *${prefix}Bijak*
-┃ _Random kata kata motivasi_
+┃ _Random frase motivasional_
 ┠⊷️ *${prefix}Chatprank (Teks1/Teks2)*
-┃ _Ex : ${prefix}Chatprank hai bang/sat_
+┃ _Ex : ${prefix}Chatprank hai Fsociety/Nutria_
 ┠⊷️ *${prefix}Itsme*
-┃ _Menampilkan profil_
+┃ _Mi perfil_
 ┠⊷️ *${prefix}Fml*
-┃ _Quotes Fuck My Life_
+┃ _Preguntas Fuck My Life_
 ┠⊷️ *${prefix}Asupan*
-┃ _Video penyegar timeline_
+┃ _Vídeos de actualización de la línea de tiempo_
 ┠⊷️ *${prefix}Tagme*
 ┃ _Auto tag_
-┠⊷️ *${prefix}Fitnah (Tag target|teks1|teks2)*
-┃ _Fake reply chat bot_
+┠⊷️ *${prefix}Fitnah (Objetivo de etiqueta|teks1|teks2)*
+┃ _Bot de chat de respuesta falsa_
 ┗━━━━━━━━━━━━━━━━━━━━
 *〘 MEDIA 〙*
 ┏━━━━━━━━━━━━━━━━━━━━
 ┠⊷️ *${prefix}listvn*
-┃ _Menampilkan list vn bot_
+┃ _Lista de TV_
 ┠⊷️ *${prefix}listimg*
-┃ _Menampilkan list foto_
+┃ _Lista fotos_
 ┠⊷️ *${prefix}liststik*
-┃ _Menampilkan list stiker bot_
+┃ _Lista de stikers del bot_
 ┠⊷️ *${prefix}listvid*
-┃ _Menampilkan list video_
+┃ _Lista videos_
 ┠⊷️ *${prefix}Tupai (Reply audio)*
-┃ _Rubah suara jadi chipmunk_
+┃ _Convierte la voz en ardilla_
 ┠⊷️ *${prefix}Slow (Reply audio)*
-┃ _Rubah kecepatan audio_
+┃ _Cambiar la velocidad del audio_
 ┠⊷️ *${prefix}Gemuk (Reply audio)*
-┃ _Rubah suara rendah_
+┃ _Zorro de voz baja_
 ┠⊷️ *${prefix}Bass (Reply audio)*
-┃ _Menaikan bass audio_
+┃ _Aumentar los graves de audio_
 ┗━━━━━━━━━━━━━━━━━━━━
-*〘 EDITING 〙*
+*〘 EDITACION 〙*
 ┏━━━━━━━━━━━━━━━━━━━━
 ┠⊷️ *${prefix}Gtav (Foto)*
-┃ _Membuat banner GTAV dari foto_
+┃ _Imagen de GTAV_
 ┠⊷️ *${prefix}Wanted (Foto)*
-┃ _Membuat poster WANTED dari foto_
+┃ _Imagen de "Buscado"_
 ┠⊷️ *${prefix}Drawing (Foto)*
-┃ _Filter foto pencil sketch_
+┃ _Imagen a lapiz_
 ┗━━━━━━━━━━━━━━━━━━━━
 *〘 ANIME 〙*
 ┏━━━━━━━━━━━━━━━━━━━━
-┠⊷️ *${prefix}Kusonime (Query)*
-┃ _Searching info anime di kusonime_
-┠⊷️ *${prefix}Neonime (Query)*
-┃ _Searching info anime di neonime_
-┠⊷️ *${prefix}Charnime (Query)*
-┃ _Searching info karakter anime_
+┠⊷️ *${prefix}Kusonime (Anime)*
+┃ _Busca info de anime con kusonime_
+┠⊷️ *${prefix}Neonime (Anime)*
+┃ _Busca info de anime con neonime_
+┠⊷️ *${prefix}Charnime (Anime)*
+┃ _Busca info karakter anime_
 ┠⊷️ *${prefix}Wait*
-┃ _Deteksi info anime dari image_
+┃ _Busca info de anime mediante foto_
 ┠⊷️ *${prefix}Anime*
-┃ _Searching gambar anime_
+┃ _Busca imagen de anime_
 ┠⊷️ *${prefix}Loli*
-┃ _Searching gambar anime loli_
+┃ _Busca imagen de Loli_
 ┠⊷️ *${prefix}Neko*
-┃ _Searching gambar anime neko_
+┃ _Busca imagen de Neko_
 ┗━━━━━━━━━━━━━━━━━━━━
 *〘 GAME 〙*
 ┏━━━━━━━━━━━━━━━━━━━━
 ┠⊷️ *${prefix}Tebakgambar*
-┃ _Random tebak gambar_
+┃ _Adivina la imagen al azar_
 ┠⊷️ *${prefix}Caklontong*
-┃ _Random quiz cak lontong_
-┠⊷️ *${prefix}Seberapagay (Teks)*
+┃ _Prueba aleatoria cak lontong_
+┠⊷️ *${prefix}Seberapagay (@)*
 ┃ _Presentase gay_
-┠⊷️ *${prefix}Seberapabucin (Teks)*
+┠⊷️ *${prefix}Seberapabucin (@)*
 ┃ _Presentase bucin_
 ┗━━━━━━━━━━━━━━━━━━━━
-*〘 TOD 〙*
+*〘 GAME2 〙*
 ┏━━━━━━━━━━━━━━━━━━━━
 ┠⊷ *${prefix}Truth*
 ┠⊷ *${prefix}Dare*
 ┗━━━━━━━━━━━━━━━━━━━━
-*〘 KERANG AJAIB 〙*
+*〘 ADIVINACION 〙*
 ┏━━━━━━━━━━━━━━━━━━━━
-┠⊷ *${prefix}Apakah (Teks)*
-┠⊷ *${prefix}Bisakah (Teks)*
-┠⊷ *${prefix}Kapankah (Teks)*
-┠⊷ *${prefix}Rate (Teks)*
-┠⊷ *${prefix}Gantengcek (Teks)*
-┠⊷ *${prefix}Cantikcek (Teks)*
+┠⊷ *${prefix}Apakah (@)*
+┠⊷ *${prefix}Bisakah (@)*
+┠⊷ *${prefix}Kapankah (@)*
+┠⊷ *${prefix}Rate (@)*
+┠⊷ *${prefix}Gantengcek (@)*
+┠⊷ *${prefix}Cantikcek (@)*
 ┗━━━━━━━━━━━━━━━━━━━━
-*〘 TOOLS 〙*
+*〘 HERRAMIENTAS 〙*
 ┏━━━━━━━━━━━━━━━━━━━━
 ┠⊷️ *${prefix}Stiker*
-┃ _Membuat stiker dari gambar/video_
+┃ _Hacer pegatinas a partir de imágenes / videos_
 ┠⊷️ *${prefix}Triggered*
-┃ _Membuat stiker triggered_
+┃ _Crea pegatinas activadas_
 ┠⊷️ *${prefix}Wasted*
-┃ _Membuat stiker wasted_
-┠⊷️ *${prefix}Ttp (Teks)*
-┃ _Membuat stiker dari teks_
+┃ _Haz pegatinas desperdiciadas_
+┠⊷️ *${prefix}Ttp (Text)*
+┃ _Crea pegatinas a partir de texto_
 ┠⊷️ *${prefix}Toimg*
-┃ _Mengubah stiker jadi gambar_
+┃ _Convierte pegatinas en imágenes_
 ┠⊷️ *${prefix}Tomp3*
-┃ _Mengubah video jadi audio_
-┠⊷️ *${prefix}Play (Teks)*
-┃ _Memainkan lagu_
-┠⊷️ *${prefix}Tts (Teks)*
-┃ _Teks to sound_
+┃ _Convierte video a audio_
+┠⊷️ *${prefix}Play (Cancion)*
+┃ _Toca una canción_
+┠⊷️ *${prefix}Tts (Cod+Text)*
+┃ _Audio sonido bot_
 ┠⊷️ *${prefix}Igstalk (username)*
-┃ _Stalking Instagram_
-┠⊷️ *${prefix}Timer (Waktu)*
-┃ _Stopwatch_
+┃ _Info Instagram_
+┠⊷️ *${prefix}Timer (Hora)*
+┃ _Cronometro_
 ┠⊷️ *${prefix}Wame*
-┃ _Membuat link wa.me_
-┠⊷️ *${prefix}Nulis (Teks)*
-┃ _Menulis dibuku_
+┃ _Link wa.me_
+┠⊷️ *${prefix}Nulis (Text)*
+┃ _Escribir en libro_
 ┠⊷️ *${prefix}Ocr*
-┃ _Menyalin teks dalam gambar_
+┃ _Copia el texto de la imagen_
 ┠⊷️ *${prefix}Wait*
-┃ _Info anime dari gambar anime_
+┃ _Info de anime mediante imagen_
 ┗━━━━━━━━━━━━━━━━━━━━
 *〘 TEXT 〙*
 ┏━━━━━━━━━━━━━━━━━━━━
-┠⊷️ *${prefix}Tahta (Teks)*
-┃ _Ex : ${prefix}Tahta Lexa_
+┠⊷️ *${prefix}Tahta (Text)*
+┃ _Ex : ${prefix}Trono Nutria_
 ┗━━━━━━━━━━━━━━━━━━━━
 *〘 TEXT2 〙*
 ┏━━━━━━━━━━━━━━━━━━━━
 ┠⊷️ *${prefix}Ephoto list*
-┃ _Menampilkan kode text ephoto_
-┠⊷️ *${prefix}Ephoto (Kode + Teks)*
-┃ _Ex : ${prefix}Ephoto 25 Lexa_
+┃ _Lista de Fotos_
+┠⊷️ *${prefix}Ephoto (coded + Tect)*
+┃ _Ex : ${prefix}Ephoto 25 Fsociety_
 ┠⊷️ *${prefix}Textpro list*
-┃ _Menampilkan kode text textpro_
-┠⊷️ *${prefix}Textpro (Kode + Teks)*
-┃ _Ex : ${prefix}Textpro 55 Lexa_
+┃ _Mostrar el código textpro__
+┠⊷️ *${prefix}Textpro (coded + Text)*
+┃ _Ex : ${prefix}Textpro 55 Fsociety_
 ┗━━━━━━━━━━━━━━━━━━━━
-*〘 PICTURE 〙*
+*〘 FOTOGRAFIAS 〙*
 ┏━━━━━━━━━━━━━━━━━━━━
 ┠⊷️ *${prefix}Cogan*
 ┃ _Random foto cogan_
@@ -809,87 +802,87 @@ _${Ig}_
 ┠⊷️ *${prefix}Meme*
 ┃ _Random meme_
 ┠⊷️ *${prefix}Twit*
-┃ _Random foto status Twitter_
+┃ _Random foto estado de Twitter_
 ┠⊷️ *${prefix}Quotes*
 ┃ _Random foto quotes_
 ┠⊷️ *${prefix}Wp*
 ┃ _Random wallpaper_
 ┠⊷️ *${prefix}Cyberpunk*
 ┃ _Random foto cyberpunk_
-┠⊷️ *${prefix}Img (Query)*
-┃ _Mencari gambar sesuai request_
-┠⊷️ *${prefix}Google (Query)*
-┃ _Mencari gambar sesuai request_
+┠⊷️ *${prefix}Img (Nombre de la img)*
+┃ _Encuentra la imagen de acuerdo a la solicitud._
+┠⊷️ *${prefix}Google (Buscar)*
+┃ _Encuentra la busqueda de acuerdo a la solicitud._
 ┗━━━━━━━━━━━━━━━━━━━━
-*〘 EDUKASI 〙*
+*〘 EDUCACIÓN 〙*
 ┏━━━━━━━━━━━━━━━━━━━━
-┠⊷️ *${prefix}Brainly (Pertanyaan)*
-┃ _Mencari jawaban Brainly_
-┠⊷️ *${prefix}Wiki (Query)*
-┃ _Pencarian wiki_
-┠⊷️ *${prefix}Kbbi (Query)*
-┃ _Kamus besar bahasa Indonesia_
-┠⊷️ *${prefix}Tl (Teks/kode bahasa)*
-┃ _Translate semua bahasa_
+┠⊷️ *${prefix}Brainly (Pregunta)*
+┃ _Buscando respuestas de Brainly_
+┠⊷️ *${prefix}Wiki (Consulta)*
+┃ _Búsqueda wiki_
+┠⊷️ *${prefix}Kbbi (Consulta)*
+┃ _Diccionario de Indonesia_
+┠⊷️ *${prefix}Tl (Text/coded idioma)*
+┃ _Traducir todos los idiomas_
 ┠⊷️ *${prefix}Fakta*
 ┃ _Ramdom fakta_
 ┠⊷️ *${prefix}Kodebahasa*
-┃ _Menampilkan kode bahasa_
+┃ _Muestra el código de idioma_
 ┠⊷️ *${prefix}Kodenegara*
-┃ _Menampilkan kode negara_
+┃ _Muestra el código de país_
 ┗━━━━━━━━━━━━━━━━━━━━
-*〘 OTHER 〙*
+*〘 OTROS 〙*
 ┏━━━━━━━━━━━━━━━━━━━━
-┠⊷️ *${prefix}Lirik (Judul lagu)*
-┃ _Mencari lirik lagu_
-┠⊷️ *${prefix}Chord (Judul lagu*)
-┃ _Mencari chord lagu_
+┠⊷️ *${prefix}Lirik (título de la canción)*
+┃ _Buscar letra de cancion_
+┠⊷️ *${prefix}Chord (título de la canción)*
+┃ _Buscar acordes de canciones_
 ┠⊷️ *${prefix}Jadwaltvnow*
-┃ _Jadwal tv pushname ini tayang_
-┠⊷️ *${prefix}Map (Daerah)*
-┃ _Menampilkan mini map_
+┃ _Este horario de tv pushname se transmite_
+┠⊷️ *${prefix}Map (Área)*
+┃ _Muestra el minimapa_
 ┠⊷️ *${prefix}Trendtwit*
-┃ _Menampilkan trend Twitter_
+┃ _Muestra las tendencias de Twitter_
 ┠⊷️ *${prefix}Beritahoax*
-┃ _Menampilkan info berita palsu_
+┃ _Muestra información de noticias falsas_
 ┠⊷️ *${prefix}Gplaystore*
-┃ _Pencarian aplikasi di playstore_
+┃ _Aplicación de búsqueda en Play Store_
 ┗━━━━━━━━━━━━━━━━━━━━
-*〘 PRIMBON 〙*
+*〘 ADIVINANZA 〙*
 ┏━━━━━━━━━━━━━━━━━━━━
-┠⊷️ *${prefix}Arti (Nama)*
-┃ _Mencari tau arti namamu_
-┠⊷️ *${prefix}Couple (Nama & Nama)*
-┃ _Kecocokan berdasarkan nama_
-┠⊷️ *${prefix}Jadian (Tgl-bln-thn)*
-┃ _Karakteristik dari tanggal jadian_
-┠⊷️ *${prefix}Weton (Tgl-bln-thn)*
-┃ _Info weton tanggal lahir_
-┠⊷️ *${prefix}Zodiak (Teks)*
-┃ _Ramalan zodiak harian_
-┠⊷️ *${prefix}Artimimpi (Teks)*
-┃ _Mencari tau arti mimpi kamu_
+┠⊷️ *${prefix}Arti (Nombre)*
+┃ _Descubra el significado de su nombre_
+┠⊷️ *${prefix}Couple (Nombre & Nombre)*
+┃ _Coincidencias por nombre_
+┠⊷️ *${prefix}Jadian (dia-mes-año)*
+┃ _Características del aniversario_
+┠⊷️ *${prefix}Weton (doa-mes-año)*
+┃ _Fecha de nacimiento de Weton info_
+┠⊷️ *${prefix}Zodiak (Text)*
+┃ _Predicciones diarias del zodíaco_
+┠⊷️ *${prefix}Artimimpi (Text)*
+┃ _Descubriendo el significado de tus sueños_
 ┗━━━━━━━━━━━━━━━━━━━━
 *〘 ISLAM 〙*
 ┏━━━━━━━━━━━━━━━━━━━━
-┠⊷️ *${prefix}Alquran (Nomor surah)*
-┃ _Menampilkan surah dalam Al-Qur'an_
+┠⊷️ *${prefix}Alquran (Número de sura)*
+┃ _Muestra una sura en el Corán_
 ┠⊷️ *${prefix}Ngaji*
-┃ _Random ayat dalam surah Al-Qur'an_
-┠⊷️ *${prefix}Tafsir (Query)*
-┃ _Mencari tafsir dalam Al-Qur'an_
-┠⊷️ *${prefix}Sholat (Daerah)*
-┃ _Info jadwal sholat daerah_
+┃ _Versículos aleatorios en la sura Al-Qur'an_
+┠⊷️ *${prefix}Tafsir (Consulta)*
+┃ _Buscando tafsir en el Corán_
+┠⊷️ *${prefix}Sholat (Área)*
+┃ _Información del horario de oración del área_
 ┗━━━━━━━━━━━━━━━━━━━━
-*〘 WEATHER 〙*
+*〘 TIEMPO 〙*
 ┏━━━━━━━━━━━━━━━━━━━━
-┠⊷️ *${prefix}Cuaca (Daerah)*
-┃ _Menampilkan info cuaca_
+┠⊷️ *${prefix}Cuaca (Área)*
+┃ _Muestra información meteorológica_
 ┠⊷️ *${prefix}Infogempa*
-┃ _Menampilkan info gempa terkini_
+┃ _Muestra la información más reciente sobre terremotos_
 ┃━━━━━━━━━━━━━━━━━━━━
 ┗━━━━━━━━━━━━━━━━━━━━
-*〘 download 〙*
+*〘 DESCARGAS 〙*
 ┏━━━━━━━━━━━━━━━━━━━━
 ┠⊷️ *${prefix}Ytmp3 (Link)*
 ┃ _Download audio youtube_
@@ -906,20 +899,20 @@ _${Ig}_
 ┠⊷️ *${prefix}Pin (Link)*
 ┃ _Download video Pinterest_
 ┠⊷️ *${prefix}Joox (Judul lagu*)
-┃ _Download lagu di joox_
+┃ _Download canción en joox_
 ┗━━━━━━━━━━━━━━━━━━━━
 *〘 OWNER 〙*
 ┏━━━━━━━━━━━━━━━━━━━━
 ┠⊷️ *${prefix}Clone*
-┃ _Cloning foro profil target_
+┃ _Clonación del objetivo del perfil del foro_
 ┠⊷️ *${prefix}Block*
-┃ _Block nomor target_
+┃ _Bloquear numero_
 ┠⊷️ *${prefix}Unblock*
-┃ _UnBlock nomor target_
+┃ _Desbloquear numero_
 ┠⊷️ *${prefix}Bc*
-┃ _Pesan Broadcast_
+┃ _Mensaje de difusión_
 ┠⊷️ *${prefix}Blocklist*
-┃ _List user terblokir_
+┃ _Lista usuarios bloqueados_
 ┗━━━━━━━━━━━━━━━━━━━━`,
 
 contextInfo: {
@@ -1009,11 +1002,11 @@ case 'ceksaldo':
   me = Lxa.user
   uptime = process.uptime()
   teks = `*‣ Nama bot* : ${me.name}
-  ‣ *Nomor Bot* : @${me.jid.split('@')[0]}
-  ‣ *Owner* : Mrf.zvx
+  ‣ *Nombre Bot* : @${me.jid.split('@')[0]}
+  ‣ *Creador* : Nugtrix-DT
   ‣ *Prefix* : ${prefix}
-  ‣ *Total Block Contact* : ${blocked.length}
-  ‣ *The bot is active on* : ${kyun(uptime)}
+  ‣ *Total usuarios bloqueados* : ${blocked.length}
+  ‣ *Tiempo de conexion* : ${kyun(uptime)}
   ‣ *Total User* : ${_registered.length} User
   ‣ *Total Chat* : ${totalchat.length}`
   buffer = await getBuffer(me.imgUrl)
@@ -1030,7 +1023,7 @@ const timestamp = speed();
 const latensi = speed() - timestamp
 Lxa.updatePresence(from, Presence.composing)
 uptime = process.uptime()
-Lxa.sendMessage(from, `*Kecepatan respon bot*\n‣ *Speed* : ${latensi.toFixed(4)} _Second_\n\n*Info bot*\n‣ *Total chat* : ${totalchat.length}\n‣ *Total User* : ${_registered.length}\n‣ *Block* : ${blocked.length}\n‣ *Online* : ${kyun(uptime)}`, text, {
+Lxa.sendMessage(from, `*Kecepatan respon bot*\n‣ *Velocidad* : ${latensi.toFixed(4)} _Second_\n\n*Info bot*\n‣ *Total chat* : ${totalchat.length}\n‣ *Total User* : ${_registered.length}\n‣ *Bloqueados* : ${blocked.length}\n‣ *Online* : ${kyun(uptime)}`, text, {
   quoted: mek
 })
 break
@@ -1094,7 +1087,7 @@ break
 
 //---Zodiak harian
 case 'zodiak':
-if (args.length < 1) return reply('*☒* Masukan nama zodiak')
+if (args.length < 1) return reply('*☒* Ingrese su nombre del zodiaco')
 Lxa.updatePresence(from, Presence.composing)
 if (!isRegister) return reply(mess.only.daftarB)
 teks = body.slice(8)
@@ -1112,7 +1105,7 @@ break
   case 'img':
 if (!isRegister) return reply(mess.only.daftarB)
 
-if (args.length < 1) return reply('*☒* Masukan query')
+if (args.length < 1) return reply('*☒* Ingrese una consulta')
 tels = body.slice(5)
 Lxa.updatePresence(from, Presence.composing)
 reply(mess.wait)
@@ -1137,7 +1130,7 @@ case 'pinterest':
 tels = body.slice(11)
 if (!isRegister) return reply(mess.only.daftarB)
 
-if (args.length < 1) return reply('*☒* Masukan query')
+if (args.length < 1) return reply('*☒* Ingrese una consulta')
 Lxa.updatePresence(from, Presence.composing)
 try {
 data = await fetchJson(`https://api.fdci.se/sosmed/rep.php?gambar=${tels}`, {
@@ -1448,7 +1441,7 @@ case 'weton':
   if (args.length < 1) return Lxa.sendMessage(from, `Masukan tanggal-bulan-tahun`, text, {
 quoted: mek
   })
-  if (!q.includes('-')) return  reply('Masukan tanggal-bulan-tahun dengan benar\n*Contoh : 09-09-2009*')
+  if (!q.includes('-')) return  reply('Ingrese la fecha-mes-año dengan benar\n*Contoh : 09-09-2009*')
   pc = body.slice(7)
   teks1 = pc.split("-")[0];
   teks2 = pc.split("-")[1];
@@ -1470,7 +1463,7 @@ break
 case 'seberapagay':
   if (!isRegister) return reply(mess.only.daftarB)
   
-  if (args.length < 1) return Lxa.sendMessage(from, '*☒* Masukan pertanyaan', text, {
+  if (args.length < 1) return Lxa.sendMessage(from, '*☒* Ingrese el nombre del objetivo', text, {
 quoted: mek
   })
   teks = body.slice(13)
@@ -1484,7 +1477,7 @@ quoted: mek
 case 'seberapabucin':
   if (!isRegister) return reply(mess.only.daftarB)
   
-  if (args.length < 1) return Lxa.sendMessage(from, '*☒* Masukan nama target', text, {
+  if (args.length < 1) return Lxa.sendMessage(from, '*☒* Ingrese el nombre del objetivo', text, {
 quoted: mek
   })
   teks = body.slice(15)
@@ -1501,7 +1494,7 @@ quoted: mek
 
 //--searching lirik
 case 'lirik':
-  if (args.length < 1) return reply('Masukan query')
+  if (args.length < 1) return reply('Ingrese una consulta')
   if (!isRegister) return reply(mess.only.daftarB)
   
   Lxa.updatePresence(from, Presence.composing)
@@ -1518,7 +1511,7 @@ method: 'get'
   break
 
 case 'namae':
-  if (args.length < 1) return reply('*☒* Masukan nama')
+  if (args.length < 1) return reply('*☒* Ingresa un nombre')
 Lxa.updatePresence(from, Presence.composing)
 if (!isRegister) return reply(mess.only.daftarB)
 
@@ -1534,7 +1527,7 @@ reply(hasil)
 break
 
 case 'alay':
-  if (args.length < 1) return reply('*☒* Masukan teks')
+  if (args.length < 1) return reply('*☒* Ingrese texto')
 Lxa.updatePresence(from, Presence.composing)
 if (!isRegister) return reply(mess.only.daftarB)
 
@@ -1561,7 +1554,7 @@ method: 'get'
 
 teks = '*Google Play Store*\n\n'
 				for (let i of data.result) {
-					teks += `        ────────────────\n\n‣ *Nama* : ${i.title}\n‣ *Developer* : ${i.developer}\n‣ *Rating* : ${i.rating}\n‣ *Link* : ${i.url}\n\n`
+					teks += `        ────────────────\n\n‣ *Nombre* : ${i.title}\n‣ *Gente* : ${i.developer}\n‣ *Puntuacion* : ${i.rating}\n‣ *Link* : ${i.url}\n\n`
 				}
 				teks += `        ────────────────`
 reply(teks.trim())
@@ -1618,7 +1611,7 @@ case 'charnime':
   Lxa.updatePresence(from, Presence.composing)
   if (!isRegister) return reply(mess.only.daftarB)
   
-  if (args.length < 1) return reply('*☒* Masukan nama karakter anime')
+  if (args.length < 1) return reply('*☒* Ingresa el nombre del personaje de anime')
   try {
   data = await fetchJson(`http://lolhuman.herokuapp.com/api/character?apikey=${lolKey}&query=${teks}`)
   buf = await getBuffer(data.result.image.large)
@@ -1634,7 +1627,7 @@ caption: hasil, quoted: mek
 
 case 'textgen':
   teks = body.slice(9)
-  if (args.length < 1) return reply('*☒* Masukan teks')
+  if (args.length < 1) return reply('*☒* Ingrese texto')
   Lxa.updatePresence(from, Presence.composing)
   if (!isRegister) return reply(mess.only.daftarB)
   
@@ -1653,7 +1646,7 @@ case 'kusonime':
   Lxa.updatePresence(from, Presence.composing)
   if (!isRegister) return reply(mess.only.daftarB)
   
-  if (args.length < 1) return reply('*☒* Masukan nama animenya')
+  if (args.length < 1) return reply('*☒* Ingrese el nombre del anime')
   try {
   data = await fetchJson(`https://st4rz.herokuapp.com/api/kuso?q=${teks}`)
   hasil = `‣ *Judul* : ${data.title}\n‣ *Info* : ${data.info}\n‣ *Sinopsis* : ${data.sinopsis}\n‣ *Link download* :\n${data.link_dl}`
@@ -1671,7 +1664,7 @@ case 'igstalk':
 yolo = body.slice(9)
 if (!isRegister) return reply(mess.only.daftarB)
 
-if (args.length < 1) return reply('*☒* Masukan username')
+if (args.length < 1) return reply('*☒* Introduzca su nombre de usuario')
 try {
 hmm = await fetchJson(`http://lolhuman.herokuapp.com/api/stalkig/${yolo}?apikey=${lolKey}`)
 reply(mess.wait)
@@ -1688,7 +1681,7 @@ break
 
 
 case 'apakah':
-  if (args.length < 1) return reply('*☒* Masukan pertanyaan')
+  if (args.length < 1) return reply('*☒* Ingrese una pregunta')
   Lxa.updatePresence(from, Presence.composing)
   random = apakah[Math.floor(Math.random() * (apakah.length))]
   hasil = `Apakah : *${body.slice(8)}*\n\nJawaban : *${random}*`
@@ -1697,7 +1690,7 @@ case 'apakah':
 
 //bisakah
 case 'bisakah':
-  if (args.length < 1) return reply('*☒* Masukan pertanyaan')
+  if (args.length < 1) return reply('*☒* Ingrese una pregunta')
   Lxa.updatePresence(from, Presence.composing)
   if (!isRegister) return reply(mess.only.daftarB)
   random = bisakah[Math.floor(Math.random() * (bisakah.length))]
@@ -1706,7 +1699,7 @@ case 'bisakah':
   break
 
 case 'rate':
-  if (args.length < 1) return reply('*☒* Masukan pertanyaan')
+  if (args.length < 1) return reply('*☒* Ingrese una pregunta')
   Lxa.updatePresence(from, Presence.composing)
   if (!isRegister) return reply(mess.only.daftarB)
   random = `${Math.floor(Math.random() * 100)}`
@@ -1715,7 +1708,7 @@ case 'rate':
   break
 
 case 'kapankah':
-  if (args.length < 1) return reply('*☒* Masukan pertanyaan')
+  if (args.length < 1) return reply('*☒* Ingrese una pregunta')
   Lxa.updatePresence(from, Presence.composing)
   if (!isRegister) return reply(mess.only.daftarB)
   random = kapankah[Math.floor(Math.random() * (kapankah.length))]
@@ -1725,7 +1718,7 @@ case 'kapankah':
   break
 
 case 'kapan':
-  if (args.length < 1) return reply('*☒* Masukan pertanyaan')
+  if (args.length < 1) return reply('*☒* Ingrese una pregunta')
   Lxa.updatePresence(from, Presence.composing)
   if (!isRegister) return reply(mess.only.daftarB)
   random = kapankah[Math.floor(Math.random() * (kapankah.length))]
@@ -1769,7 +1762,7 @@ case 'triggered':
                                         })
                                     
                                              } else {
-                                                 reply('Gunakan foto!')
+                                                 reply('¡Usa una foto!')
                                           }
                                              break
 
@@ -1828,7 +1821,7 @@ if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0)
   hehe = await getBuffer(`https://videfikri.com/api/textmaker/pencil/?urlgbr=${anu.display_url}`)
  Lxa.sendMessage(from, hehe, image, {quoted:mek})
 } else {
-  reply('Jangan tambah kan apapun pada command')
+  reply('No agregue nada al comando')
 }
 break
 
@@ -1845,7 +1838,7 @@ if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0)
   hehe = await getBuffer(`https://videfikri.com/api/textmaker/wanted/?urlgbr=${anu.display_url}&text1=Dicari&text2=${tels}`)
  Lxa.sendMessage(from, hehe, image, {quoted:mek})
 } else {
-  reply('Jangan tambah kan apapun pada command')
+  reply('No agregue nada al comando')
 }
 break
 
@@ -1861,7 +1854,7 @@ if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0)
   hehe = await getBuffer(`https://videfikri.com/api/textmaker/gtavposter/?urlgbr=${anu.display_url}`)
  Lxa.sendMessage(from, hehe, image, {quoted:mek})
 } else {
-  reply('Jangan tambah kan apapun pada command')
+  reply('No agregue nada al comando')
 }
 break
 
@@ -1913,7 +1906,7 @@ break
   case 'tl':
     if (!isRegister) return reply(mess.only.daftarB)
   
-if (args.length < 1) return Lxa.sendMessage(from, '*☒* Masukan teks/kode bahasa', text, {
+if (args.length < 1) return Lxa.sendMessage(from, '*☒* Ingrese el código de texto / idioma', text, {
   quoted: mek
 })
 var pc = body.slice(4)
@@ -1934,7 +1927,7 @@ break
   case 'reverse':
     if (!isRegister) return reply(mess.only.daftarB)
   
-if (args.length < 1) return Lxa.sendMessage(from, '*☒* Masukan teks', text, {
+if (args.length < 1) return Lxa.sendMessage(from, '*☒* Ingrese texto', text, {
   quoted: mek
 })
 var pc = body.slice(9)
@@ -2015,7 +2008,7 @@ break
   case 'brainly':
 if (!isRegister) return reply(mess.only.daftarB)
   
-if (args.length < 1) return Lxa.sendMessage(from, '*☒* Masukan pertanyaan', text, {
+if (args.length < 1) return Lxa.sendMessage(from, '*☒* Ingrese una pregunta', text, {
   quoted: mek
 })
 teks = body.slice(9)
@@ -2033,7 +2026,7 @@ break
   case 'wiki':
     if (!isRegister) return reply(mess.only.daftarB)
 
-if (args.length < 1) return reply('Masukan query')
+if (args.length < 1) return reply('Ingrese una consulta')
 tels = body.slice(6)
 try {
 anu = await fetchJson(`https://tobz-api.herokuapp.com/api/wiki?q=${tels}&apikey=BotWeA`, {
@@ -2052,7 +2045,7 @@ break
 case 'google':
   if (!isRegister) return reply(mess.only.daftarB)
 
-  if (args.length < 1) return reply('*☒* Masukan teks')
+  if (args.length < 1) return reply('*☒* Ingrese texto')
   goo = body.slice(7)
   try {
   pint = await getBuffer(`http://lolhuman.herokuapp.com/api/gimage?apikey=${lolKey}&query=${goo}`, {
@@ -2094,7 +2087,7 @@ if (!isRegister) return reply(mess.only.daftarB)
 
 Lxa.updatePresence(from, Presence.composing)
 reply(mess.wait)
-if (args.length < 1) return reply(`*☒* Masukan judul anime`)
+if (args.length < 1) return reply(`*☒* Ingresa un título de anime`)
 teks = body.slice(9)
 try {
 data = await fetchJson(`https://api.zeks.xyz/api/neonimesearch?q=${teks}&apikey=${viKey}`, {
@@ -2102,10 +2095,10 @@ data = await fetchJson(`https://api.zeks.xyz/api/neonimesearch?q=${teks}&apikey=
 })
 teks = '••••••••••••••••••••••\n'
 for (let i of data.result) {
-  teks += `‣ *Title* : ${i.title}\n‣ *link* : ${i.link}\n••••••••••••••••••••••\n`
+  teks += `‣ *Titulo: ${i.title}\n‣ *link* : ${i.link}\n••••••••••••••••••••••\n`
 }
 reply(teks.trim())
-if (data.message) return reply(`Maaf Info anime *${teks} tidak ditemukan`)
+if (data.message) return reply(`Lo siento información de anime *${teks} tidak ditemukan`)
 
 } catch {
   reply(mess.ferr)
@@ -2189,7 +2182,7 @@ case 'kbbi':
 Lxa.updatePresence(from, Presence.composing)
 if (!isRegister) return reply(mess.only.daftarB)
 
-if (args.length < 1) return reply(`*☒* Masukan teks\nContoh : ${prefix}chatprank p/unten`)
+if (args.length < 1) return reply(`*☒* Ingrese texto\nContoh : ${prefix}chatprank p/unten`)
 tels = body.slice(11)
 var teks1 = tels.split("/")[0];
 var teks2 = tels.split("/")[1];
