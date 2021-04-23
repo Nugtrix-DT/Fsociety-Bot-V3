@@ -1,15 +1,15 @@
 
 {
 	"prefix": ".",
-	"ownerNumber": "994403722036",
+	"ownerNumber": "+994403722036",
 	"BarBarKey": "YourApiKey",
 	"Vhtearkey": "YourApiKey",
 	"LolHumanKey": "YourApiKey",
         "Vinzapi": "apivinz",
         "Itsmeikyapi": "onlydeveloper",
-	"limit": "20",
-  "memberlimit": "20",
+	"limit": "9999",
+  "memberlimit": "9999",
   "cr": "𝗠𝗮𝗱𝗲 𝗪𝗶𝘁𝗵 ❤️",
   "hargalimit": "500",
-  "NamaBot": "Fsociety V.3",
+  "NamaBot": "Fsociety",
 }
