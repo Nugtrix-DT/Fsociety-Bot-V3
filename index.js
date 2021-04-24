@@ -2486,7 +2486,7 @@ case 'play':
   reply(mess.wait)
   play = body.slice(6)
   try {
-  anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=apivinz`)
+  anu = await fetchJson(`https://api.lolhuman.xyz/api/ytplay?apikey=cee9ac866be7c2573633a355&query=${play}`)
   if (anu.error) return reply(anu.error)
   infomp3 = `*Audio Ditemukan*\n‣ *Judul* : ${anu.result.title}\n‣ *Source* : ${anu.result.source}\n‣ *Ukuran* : ${anu.result.size}\n\n_Mengirim file silakan tunggu jika audio tidak muncul download sendiri di sini_\n‣ *Link* : ${anu.result.url_audio}
   `
